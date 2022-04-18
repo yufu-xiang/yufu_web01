@@ -1,0 +1,127 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image:url("../../assets/img/bg01.gif");
+  background-size: 100% 100%;
+  padding: 10px;
+  .banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    border: solid 1px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .carousel-inner {
+      height: 200px;
+      border-radius: 15px;
+
+      > div {
+        height: 100%;
+        >img{
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .logo {
+      height: 100px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > h2 {
+        color: #fff;
+        font-size: 4em;
+        position: absolute;
+        &:nth-child(1) {
+          color: transparent;
+          -webkit-text-stroke: 2px #e37f82;
+        }
+
+        &:nth-child(2) {
+          color: #E96D71;
+          animation: animate 4s ease-in-out infinite;
+        }
+
+        @keyframes animate {
+          0%,
+          100% {
+            clip-path: polygon(
+                            0% 45%,
+                            16% 44%,
+                            33% 50%,
+                            54% 60%,
+                            70% 61%,
+                            84% 59%,
+                            100% 52%,
+                            100% 100%,
+                            0% 100%
+            );
+          }
+
+          50% {
+            clip-path: polygon(
+                            0% 60%,
+                            15% 65%,
+                            34% 66%,
+                            51% 62%,
+                            67% 50%,
+                            84% 45%,
+                            100% 46%,
+                            100% 100%,
+                            0% 100%
+            );
+          }
+        }
+      }
+    }
+    >input{
+      width: 300px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: solid 1px #999;
+      outline:none;
+      &:focus{
+        border-color: #e08292;
+      }
+    }
+   >div{
+     position: relative;
+     width: 100%;
+     height: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     >button{
+       position: absolute;
+       left: 50%;
+       top: 50%;
+       transform: translate(-50%,-50%);
+       width: 60px;
+       height: 30px;
+       font-weight: bold;
+       color: #fff;
+       border: none;
+       border-radius: 5px;
+       background-image: linear-gradient( 135deg, #FFAA85 10%, #B3315F 100%);
+       
+     }
+     >span{
+       position: absolute;
+       right: 10%;
+       font-size: 10px;
+       color: royalblue;
+     }
+   }
+  }
+}
